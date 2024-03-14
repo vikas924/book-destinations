@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 function OffcanvasLayout({ children }) {
