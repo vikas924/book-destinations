@@ -92,3 +92,11 @@ label + input {
 .btn--primary:hover {
   border-color: var(--clr-accent);
 }
+
+.nav-links {
+  background-color: var(--clr-primary);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
