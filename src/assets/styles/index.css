@@ -23,6 +23,7 @@
 .center { text-align: center; }
 .right { text-align: end; }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -109,4 +110,11 @@ label + input {
 
 .cell {
   padding: 0.25em 0.5em;
+
+.nav-links {
+  background-color: var(--clr-primary);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
