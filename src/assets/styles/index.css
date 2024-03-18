@@ -21,6 +21,8 @@
 .justify { justify-content: center; }
 .align { place-items: center; }
 .center { text-align: center; }
+.right { text-align: end; }
+
 
 body {
   margin: 0;
@@ -93,6 +95,22 @@ label + input {
   border-color: var(--clr-accent);
 }
 
+.reservations {
+  font-size: 1rem;
+}
+
+.reservations__header {
+  font-weight: 700;
+  background-color: var(--clr-accent);
+}
+
+.reservation:nth-child(even) {
+  background-color: var(--clr-secondary);
+}
+
+.cell {
+  padding: 0.25em 0.5em;
+}
 .nav-links {
   background-color: var(--clr-primary);
   padding: 10px;
