@@ -21,6 +21,6 @@ const App = () => (
     </Routes>
     </OffcanvasLayout>
     </BrowserRouter>
-
+)
 
 export default App;

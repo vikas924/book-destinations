@@ -110,7 +110,7 @@ label + input {
 
 .cell {
   padding: 0.25em 0.5em;
-
+}
 .nav-links {
   background-color: var(--clr-primary);
   padding: 10px;
