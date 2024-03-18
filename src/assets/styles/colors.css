@@ -1,0 +1,43 @@
+:root {
+  /* -----------------------------
+    source colors
+  -------------------------------- */
+  --white--pure: 0, 0%, 100%;
+  --white: 0, 0%, 99%;
+  --primary: 74, 85%, 41%;
+  --accent: 47, 100%, 50%;
+  --secondary: 178, 84%, 40%;
+  --dark: 0, 0%, 15%;
+  --text: 0, 0%, 8%;
+  --text--semi: 0, 0%, 27%;
+  --text--medium: 0, 0%, 84%;
+  --text--light: 228, 10%, 90%;
+  
+  /* -----------------------------
+    hsl colors
+  -------------------------------- */
+  --hsl-white--pure: hsl( var(--white--pure) );
+  --hsl-white: hsl( var(--white) );
+  --hsl-primary: hsl( var(--primary) );
+  --hsl-accent: hsl( var(--accent) );
+  --hsl-secondary: hsl( var(--secondary) );
+  --hsl-dark: hsl( var(--dark) );
+  --hsl-text: hsl( var(--text) );
+  --hsl-text--semi: hsl( var(--text--semi) );
+  --hsl-text--medium: hsl( var(--text--medium) );
+  --hsl-text--light: hsl( var(--text--light) );
+
+  /* -----------------------------
+    hsl colors
+  -------------------------------- */
+  --clr-white--pure: var(--hsl-white--pure);
+  --clr-white: var(--hsl-white);
+  --clr-primary: var(--hsl-primary);
+  --clr-accent: var(--hsl-accent);
+  --clr-secondary: var(--hsl-secondary);
+  --clr-dark: var(--hsl-dark);
+  --clr-text: var(--hsl-text);
+  --clr-text--semi: var(--hsl-text--semi);
+  --clr-text--medium: var(--hsl-text--medium);
+  --clr-text--light: var(--hsl-text--light);
+}
