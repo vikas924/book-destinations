@@ -1,3 +1,7 @@
+.destination-details {
+  width: 80%;
+}
+
 .details-wrap {
   display: flex;
   margin-top: 10rem;
@@ -41,6 +45,7 @@
 .details-list {
   display: flex;
   flex-direction: column;
+  color: #383838;
 }
 
 .details-list li:nth-child(odd) {
@@ -111,6 +116,9 @@
 }
 
 @media screen and (max-width: 769px) {
+  .destination-details {
+    width: 100%;
+  }
   .details-wrap {
     flex-direction: column;
     padding-left: 0;
@@ -129,5 +137,9 @@
 
   .back-btn {
     margin: 0 0 3rem 0;
+  }
+
+  .details-list {
+    padding: 0;
   }
 }
