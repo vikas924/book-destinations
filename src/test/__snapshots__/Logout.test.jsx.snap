@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Should render Logout component correctly 1`] = `
+<div>
+  <div
+    class="logout-bg"
+  >
+    <button
+      class="logout"
+      type="button"
+    >
+      Press again to Logout
+    </button>
+  </div>
+</div>
+`;

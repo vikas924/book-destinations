@@ -6,11 +6,9 @@ import "../stylesheets/logout.css";
 const Logout = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user"));
-  const token = user.authtoken;
-  console.log(token);
+
   const handleLogout = () => {
-    dispatch(logoutUser(token)).then(() => {
+    dispatch(logoutUser()).then(() => {
       navigate("/");
       window.location.reload();
     });

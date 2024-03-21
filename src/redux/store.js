@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import destinationsSlice from "./destinations/destinationsSlice";
 import userSlice from "./authentication/userSlice";
+import reservationsSlice from "./reservations/reservationsSlice";
 
 const loadStateFromLocalStorage = () => {
   try {
@@ -30,6 +31,7 @@ const store = configureStore({
   reducer: {
     destinations: destinationsSlice,
     current_user: userSlice,
+    reservations: reservationsSlice,
   },
   preloadedState: {
     current_user: loadUserFromLocalStorage(),
