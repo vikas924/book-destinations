@@ -9,6 +9,9 @@ import image from "../assets/images/destination.png";
 import "../stylesheets/details-page.css";
 
 const DestinationDetails = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+
   const [value, setValue] = useState({
     number: 1,
     number1: 1,
@@ -38,8 +41,12 @@ const DestinationDetails = () => {
     "-" +
     oneWeekLater.getDate();
 
+  const selected = useSelector((state) =>
+    state.destinations.allDestinations.find((pkg) => pkg.id == id)
+  );
+
   const [includeMeals, setIncludeMeals] = useState(false);
-  const [total, setTotal] = useState(102);
+  const [total, setTotal] = useState(100 + parseInt(selected.price_per_night));
 
   const checkbox = (e) => {
     const int = parseInt(selected.price_per_meal);
@@ -62,10 +69,6 @@ const DestinationDetails = () => {
       );
     }
   };
-
-  const { id } = useParams();
-  const dispatch = useDispatch();
-
   const isDestinationFetched = useSelector(
     (state) => state.destinations.isDestinationFetched
   );
@@ -79,10 +82,6 @@ const DestinationDetails = () => {
       dispatch(fetchDestinations());
     }
   }, [allDestinations, dispatch, id, isDestinationFetched]);
-
-  const selected = useSelector((state) =>
-    state.destinations.allDestinations.find((pkg) => pkg.id == id)
-  );
 
   const clickHandle = async () => {
     const user = JSON.parse(localStorage.getItem("user")) || {};

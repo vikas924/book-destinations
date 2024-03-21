@@ -12,14 +12,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import "../stylesheets/nav.css";
 
 const SideNav = () => {
-  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const user = JSON.parse(localStorage.getItem("user")) || null;
   const [isNavVisible, setNavVisible] = useState(false);
   const toggleSidebar = () => {
     setNavVisible(!isNavVisible);
   };
 
   const renderLoginOrLogoutLink = () => {
-    if (user && user != {}) {
+    if (user && user !== null) {
       return (
         <li className="sidenav-item">
           <NavLink
@@ -58,7 +58,7 @@ const SideNav = () => {
           <img className="logo" src="/Trip.jfif" alt="logo" />
         </div>
         <ul className="sidenav-list d-flex flex-column justify-content-center align-items-center">
-        <li className="sidenav-item">
+          <li className="sidenav-item">
             <NavLink
               to="/delete-destinations"
               className="sidenav-link"
@@ -67,7 +67,7 @@ const SideNav = () => {
               Delete Destinations
             </NavLink>
           </li>
-         <li className="sidenav-item">
+          <li className="sidenav-item">
             <NavLink
               to="/add-destinations"
               className="sidenav-link"

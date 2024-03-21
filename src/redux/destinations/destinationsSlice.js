@@ -20,9 +20,17 @@ export const fetchDestinations = createAsyncThunk(
 export const postDestination = createAsyncThunk(
   "destinations/post",
   async (destinationData) => {
+    const user = JSON.parse(localStorage.getItem("user")) || {};
+    console.log(user);
+    const config = {
+      headers: {
+        Authorization: user.authtoken,
+      },
+    };
     const response = await axios.post(
       "http://localhost:4000/api/v1/destinations/",
-      destinationData
+      destinationData,
+      config
     );
     return response.data;
   }
@@ -31,12 +39,20 @@ export const postDestination = createAsyncThunk(
 export const deleteDestination = createAsyncThunk(
   "destinations/delete",
   async (destinationId) => {
-    const response = await axios.delete(
-      `http://localhost:4000/api/v1/destinations/${destinationId}`
+    const user = JSON.parse(localStorage.getItem("user")) || {};
+    console.log(user);
+    const config = {
+      headers: {
+        Authorization: user.authtoken,
+      },
+    };
+    await axios.delete(
+      `http://localhost:4000/api/v1/destinations/${destinationId}`,
+      config
     );
-    return destinationId; 
+    return destinationId;
   }
-)
+);
 
 const saveStateToLocalStorage = (state) => {
   try {
@@ -91,6 +107,7 @@ const destinationsSlice = createSlice({
         error: action.error.message,
       }))
       .addCase(deleteDestination.fulfilled, (state, action) => {
+        console.log(action);
         state.allDestinations = state.allDestinations.filter(
           (destination) => destination.id !== action.payload
         );
