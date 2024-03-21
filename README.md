@@ -37,7 +37,7 @@
 # 📖 [Book Destinations] <a name="about-project"></a>
 
 
-**[Book Destinations]** This application helps users book travel destinations around the globe. Users can create accounts and upload their own destinations, reserve them. Users can plan their journey with a quote provided during booking. The application uses data from Rails API, this is handled using redux toolkit. [Backend Application](https://github.com/Obimbo07/book-destinations-api).
+**[Book Destinations]** This application helps users book travel destinations around the globe. Users can create accounts and upload their own destinations, reserve them. Users can plan their journey with a quote provided during booking. The application uses data from Rails API, this is handled using redux toolkit. [Backend Application](https://github.com/Obimbo07/book-destinations-api/pull/1).
 
 ## 🛠 Built With <a name="built-with"></a>
 
