@@ -23,7 +23,7 @@ const Destinations = () => {
         navigate("/");
       }
     });
-  }, [dispatch, navigate]);
+  }, [dispatch, navigate, token.authtoken]);
   const destinations = useSelector(
     (state) => state.destinations.allDestinations
   );
