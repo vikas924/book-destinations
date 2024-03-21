@@ -7,6 +7,8 @@ import Destinations from "./main-pages.jsx";
 import DestinationDetails from "./details_page.jsx";
 import "../App.css";
 import Reservations from "./Reservations.jsx";
+import AddDestinations from "./add-destination.jsx";
+import DestinationsWithDelete from "./delete-destinations.jsx";
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/details/:id" element={<DestinationDetails />} />
         <Route path="/reservations" element={<Reservations />} />
+        <Route path="/add-destinations" element={<AddDestinations />} />
+        <Route path="/delete-destinations" element={<DestinationsWithDelete />} />
+        
       </Routes>
     </div>
   );

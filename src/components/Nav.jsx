@@ -55,9 +55,27 @@ const SideNav = () => {
       </nav>
       <nav className={`navi ${isNavVisible ? "show" : "hidden"}`}>
         <div className="logo-img">
-          <img className="logo" src="google.com" alt="logo" />
+          <img className="logo" src="/Trip.jfif" alt="logo" />
         </div>
         <ul className="sidenav-list d-flex flex-column justify-content-center align-items-center">
+        <li className="sidenav-item">
+            <NavLink
+              to="/delete-destinations"
+              className="sidenav-link"
+              onClick={toggleSidebar}
+            >
+              Delete Destinations
+            </NavLink>
+          </li>
+         <li className="sidenav-item">
+            <NavLink
+              to="/add-destinations"
+              className="sidenav-link"
+              onClick={toggleSidebar}
+            >
+              Add Destinations
+            </NavLink>
+          </li>
           <li className="sidenav-item">
             <NavLink
               to="/destinations"
