@@ -29,8 +29,11 @@ const DestinationsWithDelete = () => {
       <div>
         {destinations.map((destination) => (
           <div key={destination.id}>
+            <img src={destination.image_url} alt="avatar"  />
             <h3>{destination.name}</h3>
-            {/* Add more destination details here */}
+            <p>{destination.description}</p>
+
+           
             <button onClick={() => handleDelete(destination.id)}>Delete</button>
           </div>
         ))}

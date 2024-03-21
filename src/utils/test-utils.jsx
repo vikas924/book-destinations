@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { cleanup, render } from "@testing-library/react";
 import { afterEach } from "vitest";
 

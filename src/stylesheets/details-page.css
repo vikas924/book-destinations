@@ -39,7 +39,7 @@
   color: #383838;
   text-align: center;
   font-size: 2rem;
-  font-weight: bolds;
+  font-weight: bold;
 }
 
 .details-list {
@@ -77,11 +77,6 @@
   margin-top: 2rem;
 }
 
-.reserve-btn button:hover {
-  color: #383838;
-  background-color: rgba(116, 189, 8, 0.8);
-}
-
 .btn-icon {
   margin-left: 1.4rem;
   margin-bottom: 0.3rem;
@@ -111,6 +106,11 @@
   background-color: rgba(116, 189, 8, 0.8);
 }
 
+.reserve-btn button:hover {
+  color: #383838;
+  background-color: rgba(116, 189, 8, 0.8);
+}
+
 .back-btn-icon {
   font-size: 2rem;
 }
@@ -119,6 +119,7 @@
   .destination-details {
     width: 100%;
   }
+
   .details-wrap {
     flex-direction: column;
     padding-left: 0;
@@ -131,8 +132,8 @@
     align-items: center;
     width: 100%;
     padding-inline: 1rem;
-    max-width: none;
-    min-width: none;
+    max-width: 0;
+    min-width: 0;
   }
 
   .back-btn {

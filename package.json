@@ -24,9 +24,9 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.1",
-    "@babel/eslint-parser": "^7.22.15",
-    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/core": "^7.24.3",
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/plugin-syntax-jsx": "^7.24.1",
     "@babel/plugin-transform-runtime": "^7.24.1",
     "@babel/preset-env": "^7.24.1",
     "@babel/preset-react": "^7.24.1",
@@ -38,8 +38,11 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitest/coverage-v8": "^1.4.0",
     "babel-jest": "^29.7.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "esm": "^3.2.25",
@@ -49,6 +52,10 @@
     "jest-svg-transformer": "^1.0.0",
     "jsdom": "^24.0.0",
     "react-test-renderer": "^18.2.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
     "vite": "^5.1.4",
     "vitest": "^1.4.0"
   }
