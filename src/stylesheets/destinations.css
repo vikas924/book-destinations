@@ -22,7 +22,7 @@
 }
 
 .wrap {
-  width: 100%;
+  width: 80%;
   display: flex;
   min-height: 100vh;
 }
@@ -138,6 +138,9 @@
 
 /* Mobile */
 @media screen and (width < 768px) {
+  .wrap {
+    width: 100%;
+  }
   .destinations {
     width: 100% !important;
   }

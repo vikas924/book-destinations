@@ -3,9 +3,15 @@ import axios from "axios";
 
 export const fetchDestinations = createAsyncThunk(
   "destinations-fetcher",
-  async () => {
+  async (token) => {
+    const config = {
+      headers: {
+        Authorization: token,
+      },
+    };
     const destinations = await axios.get(
-      "http://localhost:4000/api/v1/destinations/"
+      "http://localhost:4000/api/v1/destinations/",
+      config
     );
     return destinations.data;
   }
