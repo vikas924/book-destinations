@@ -1,18 +1,17 @@
+import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "../redux/store.js";
-import Destinations from "../components/main-pages.jsx";
-import { render } from "../utils/test-utils.jsx";
 import { it, expect } from "vitest";
+import store from "../redux/store";
+import Login from "../components/Login";
 
-it("Should render Packages component correctly", () => {
+it("Should render Login component correctly", () => {
   const { container } = render(
     <Provider store={store}>
       <BrowserRouter>
-        <Destinations />
+        <Login />
       </BrowserRouter>
     </Provider>
   );
-
   expect(container).toMatchSnapshot();
 });

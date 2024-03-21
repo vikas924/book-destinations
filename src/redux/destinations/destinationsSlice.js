@@ -17,6 +17,43 @@ export const fetchDestinations = createAsyncThunk(
   }
 );
 
+export const postDestination = createAsyncThunk(
+  "destinations/post",
+  async (destinationData) => {
+    const user = JSON.parse(localStorage.getItem("user")) || {};
+    console.log(user);
+    const config = {
+      headers: {
+        Authorization: user.authtoken,
+      },
+    };
+    const response = await axios.post(
+      "http://localhost:4000/api/v1/destinations/",
+      destinationData,
+      config
+    );
+    return response.data;
+  }
+);
+
+export const deleteDestination = createAsyncThunk(
+  "destinations/delete",
+  async (destinationId) => {
+    const user = JSON.parse(localStorage.getItem("user")) || {};
+    console.log(user);
+    const config = {
+      headers: {
+        Authorization: user.authtoken,
+      },
+    };
+    await axios.delete(
+      `http://localhost:4000/api/v1/destinations/${destinationId}`,
+      config
+    );
+    return destinationId;
+  }
+);
+
 const saveStateToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state);
@@ -40,7 +77,6 @@ const destinationsSlice = createSlice({
         ...state,
         loading: true,
       }))
-
       .addCase(fetchDestinations.fulfilled, (state, action) => {
         const newState = {
           ...state,
@@ -51,12 +87,31 @@ const destinationsSlice = createSlice({
         saveStateToLocalStorage(newState);
         return newState;
       })
-
       .addCase(fetchDestinations.rejected, (state, action) => ({
         ...state,
         loading: false,
         error: action.error.message,
-      }));
+      }))
+      .addCase(postDestination.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(postDestination.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        allDestinations: [...state.allDestinations, action.payload],
+      }))
+      .addCase(postDestination.rejected, (state, action) => ({
+        ...state,
+        loading: false,
+        error: action.error.message,
+      }))
+      .addCase(deleteDestination.fulfilled, (state, action) => {
+        console.log(action);
+        state.allDestinations = state.allDestinations.filter(
+          (destination) => destination.id !== action.payload
+        );
+      });
   },
 });
 

@@ -12,20 +12,20 @@
   --text--semi: 0, 0%, 27%;
   --text--medium: 0, 0%, 84%;
   --text--light: 228, 10%, 90%;
-  
+
   /* -----------------------------
     hsl colors
   -------------------------------- */
-  --hsl-white--pure: hsl( var(--white--pure) );
-  --hsl-white: hsl( var(--white) );
-  --hsl-primary: hsl( var(--primary) );
-  --hsl-accent: hsl( var(--accent) );
-  --hsl-secondary: hsl( var(--secondary) );
-  --hsl-dark: hsl( var(--dark) );
-  --hsl-text: hsl( var(--text) );
-  --hsl-text--semi: hsl( var(--text--semi) );
-  --hsl-text--medium: hsl( var(--text--medium) );
-  --hsl-text--light: hsl( var(--text--light) );
+  --hsl-white--pure: hsl(var(--white--pure));
+  --hsl-white: hsl(var(--white));
+  --hsl-primary: hsl(var(--primary));
+  --hsl-accent: hsl(var(--accent));
+  --hsl-secondary: hsl(var(--secondary));
+  --hsl-dark: hsl(var(--dark));
+  --hsl-text: hsl(var(--text));
+  --hsl-text--semi: hsl(var(--text--semi));
+  --hsl-text--medium: hsl(var(--text--medium));
+  --hsl-text--light: hsl(var(--text--light));
 
   /* -----------------------------
     hsl colors
