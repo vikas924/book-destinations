@@ -10,7 +10,7 @@ export const fetchDestinations = createAsyncThunk(
       },
     };
     const destinations = await axios.get(
-      "http://localhost:4000/api/v1/destinations/",
+      "https://book-destinations-api.onrender.com/api/v1/destinations/",
       config
     );
     return destinations.data;
@@ -28,7 +28,7 @@ export const postDestination = createAsyncThunk(
       },
     };
     const response = await axios.post(
-      "http://localhost:4000/api/v1/destinations/",
+      "https://book-destinations-api.onrender.com/api/v1/destinations/",
       destinationData,
       config
     );
@@ -47,7 +47,7 @@ export const deleteDestination = createAsyncThunk(
       },
     };
     await axios.delete(
-      `http://localhost:4000/api/v1/destinations/${destinationId}`,
+      `https://book-destinations-api.onrender.com/api/v1/destinations/${destinationId}`,
       config
     );
     return destinationId;

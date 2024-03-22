@@ -7,12 +7,18 @@ export const authUser = createAsyncThunk("user-auth", async (token) => {
       Authorization: token,
     },
   };
-  const destinations = await axios.get("http://localhost:4000/", config);
+  const destinations = await axios.get(
+    "https://book-destinations-api.onrender.com/",
+    config
+  );
   return destinations.status;
 });
 
 export const loginUser = createAsyncThunk("user-login", async (user) => {
-  const response = await axios.post("http://localhost:4000/login", user);
+  const response = await axios.post(
+    "https://book-destinations-api.onrender.com/login",
+    user
+  );
   const token = response.headers.authorization;
   const data = {
     isAuthenticated: true,
@@ -23,14 +29,16 @@ export const loginUser = createAsyncThunk("user-login", async (user) => {
 });
 
 export const logoutUser = createAsyncThunk("user-logout", async () => {
-  // const response = await axios.delete("http://localhost:4000/logout", token);
   localStorage.removeItem("user");
 });
 
 export const registrationUser = createAsyncThunk(
   "user-registration",
   async (user) => {
-    const response = await axios.post("http://localhost:4000/signup", user);
+    const response = await axios.post(
+      "https://book-destinations-api.onrender.com/signup",
+      user
+    );
     const token = response.headers.authorization;
     const data = {
       isAuthenticated: false,
