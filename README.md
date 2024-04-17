@@ -239,7 +239,7 @@ We also love to thank the  Murat Korkmaz on Behance who provided us with the des
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./License) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
