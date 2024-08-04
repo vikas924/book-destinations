@@ -9,4 +9,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "/src/test/setup.js",
   },
+  build: {
+    outDir: "dist", // Ensure this matches your vercel.json config
+  },
 });
