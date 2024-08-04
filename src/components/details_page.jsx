@@ -5,7 +5,6 @@ import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
 import { fetchDestinations } from "../redux/destinations/destinationsSlice";
 import { createReservations } from "../redux/reservations/reservationsSlice";
 import Auth from "./auth";
-import image from "../assets/images/destination.png";
 import "../stylesheets/details-page.css";
 
 const DestinationDetails = () => {
@@ -98,7 +97,6 @@ const DestinationDetails = () => {
       createReservations({ token: user.authtoken, data })
     );
     response.then((data) => {
-      console.log(data);
       if (data) {
         data.payload.status === "success"
           ? alert("Reservation created successfully")
@@ -113,7 +111,7 @@ const DestinationDetails = () => {
       <div className="destination-details">
         <div className="details-wrap">
           <div className="img-wrap">
-            <img src={image} alt="location" className="loc-img" />
+            <img src={selected.image_url} alt="location" className="loc-img" />
           </div>
           <div className="details">
             <div className="details-container">

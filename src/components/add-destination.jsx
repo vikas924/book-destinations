@@ -24,7 +24,7 @@ const AddDestinations = () => {
     try {
       const user = JSON.parse(localStorage.getItem("user")) || {};
       const response = await fetch(
-        "https://book-destinations-api.onrender.com/api/v1/destinations",
+        "https://book-destinations-api-1.onrender.com/api/v1/destinations",
         {
           method: "POST",
           body: formData,

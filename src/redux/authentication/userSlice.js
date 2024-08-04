@@ -8,7 +8,7 @@ export const authUser = createAsyncThunk("user-auth", async (token) => {
     },
   };
   const destinations = await axios.get(
-    "https://book-destinations-api.onrender.com/",
+    "https://book-destinations-api-1.onrender.com/",
     config
   );
   return destinations.status;
@@ -16,7 +16,7 @@ export const authUser = createAsyncThunk("user-auth", async (token) => {
 
 export const loginUser = createAsyncThunk("user-login", async (user) => {
   const response = await axios.post(
-    "https://book-destinations-api.onrender.com/login",
+    "https://book-destinations-api-1.onrender.com/login",
     user
   );
   const token = response.headers.authorization;
@@ -36,7 +36,7 @@ export const registrationUser = createAsyncThunk(
   "user-registration",
   async (user) => {
     const response = await axios.post(
-      "https://book-destinations-api.onrender.com/signup",
+      "https://book-destinations-api-1.onrender.com/signup",
       user
     );
     const token = response.headers.authorization;

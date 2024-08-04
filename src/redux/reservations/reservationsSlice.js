@@ -10,7 +10,7 @@ export const fetchReservations = createAsyncThunk(
       },
     };
     const destinations = await axios.get(
-      "https://book-destinations-api.onrender.com/api/v1/reservations/",
+      "https://book-destinations-api-1.onrender.com/api/v1/reservations/",
       config
     );
     return destinations.data;
@@ -26,7 +26,7 @@ export const createReservations = createAsyncThunk(
       },
     };
     const destinations = await axios.post(
-      "https://book-destinations-api.onrender.com/api/v1/reservations/",
+      "https://book-destinations-api-1.onrender.com/api/v1/reservations/",
       data,
       config
     );
