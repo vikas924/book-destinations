@@ -86,7 +86,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Not live yet...
+> https://book-destinations.vercel.app
 
 <!-- - [Live Demo Link](https://google.com) -->
 
