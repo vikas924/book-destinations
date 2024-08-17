@@ -1,0 +1,14 @@
+.delete_page {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.deletedesti {
+  height: 200px;
+  width: 200px;
+}

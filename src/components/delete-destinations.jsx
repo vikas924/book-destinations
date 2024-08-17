@@ -5,6 +5,7 @@ import {
   deleteDestination,
 } from "../redux/destinations/destinationsSlice"; // Adjust the path accordingly
 import Auth from "./auth";
+import "../stylesheets/delete-page.css";
 
 const DestinationsWithDelete = () => {
   const dispatch = useDispatch();
@@ -26,14 +27,17 @@ const DestinationsWithDelete = () => {
   return (
     <>
       <Auth />
-      <div>
+      <div className="delete_page">
         {destinations.map((destination) => (
           <div key={destination.id}>
-            <img src={destination.image_url} alt="avatar"  />
+            <img
+              className="deletedesti"
+              src={destination.image_url}
+              alt="avatar"
+            />
             <h3>{destination.name}</h3>
             <p>{destination.description}</p>
 
-           
             <button onClick={() => handleDelete(destination.id)}>Delete</button>
           </div>
         ))}
