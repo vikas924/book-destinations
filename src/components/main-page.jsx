@@ -6,10 +6,13 @@ import { FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 const Mainpage = ({ p }) => {
   const { name, description, image_url } = p;
   const line = Array(name.length + 5).join("-");
+
+  const divStyle = {
+    backgroundImage: `url(${image_url})`,
+  };
   return (
     <Link to={`/details/${p.id}`} className="destination-link">
-      <div className="destination">
-        <img src={image_url} alt="avatar" className="destination-img" />
+      <div className="destination" style={divStyle}>
         <h5 className="destination-name">{name}</h5>
         <p className="destination-line">{line}</p>
         <p className="destination-description">{description}</p>

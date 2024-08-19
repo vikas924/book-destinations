@@ -1,0 +1,27 @@
+.destinatoncon {
+  padding: 10px 0 40px;
+}
+
+.rows {
+  display: flex;
+  padding-inline: 30px;
+  margin-inline: auto;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.listheading {
+  font-size: 0.9rem;
+  /* font-weight: 100; */
+  font-family: "DM Sans", serif;
+  color: #f26d52;
+}
+
+.listsubheading {
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  padding-block: 0.5rem;
+}

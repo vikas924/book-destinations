@@ -12,18 +12,19 @@ import DestinationsWithDelete from "./delete-destinations.jsx";
 
 const App = () => {
   return (
-    <div className="app d-flex">
+    <div className="position-relative">
       <SideNav />
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Destinations />} />
+        <Route path="/login" element={<Login />} />
+        {/* 
         <Route path="/logout" element={<Logout />} />
         <Route path="/registration" element={<Signup />} />
-        <Route path="/destinations" element={<Destinations />} />
+
         <Route path="/details/:id" element={<DestinationDetails />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/add-destinations" element={<AddDestinations />} />
-        <Route path="/delete-destinations" element={<DestinationsWithDelete />} />
-        
+        <Route path="/delete-destinations" element={<DestinationsWithDelete />} /> */}
       </Routes>
     </div>
   );

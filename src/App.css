@@ -1,9 +1,75 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-body {
-  height: 100vh;
+h1,
+h3,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 15px 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.position-relative {
+  position: relative;
+}
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .hero {
+    padding: 50px 0 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .hero {
+    padding: 70px 0 185px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .hero {
+    padding: 100px 0 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .hero {
+    padding: 120px 0 270px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    padding: 210px 0 330px;
+  }
 }
